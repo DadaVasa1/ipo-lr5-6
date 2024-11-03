@@ -1,7 +1,9 @@
 filename = 'text.txt'
+outputname = 'output.txt'
 
-with open(filename) as file:
-  text = file.read()
-  words = text.split()
-  countword = len(words)
-  print("В файле text.txt", countword, "слова.")
+with open(filename) as file, open(outputname, 'w') as output:
+  for i in file:
+    if len(i) > 5:  
+      output.write(i)
+
+print("Строки, содержащие более 5 символов, записаны в файл", outputname)
