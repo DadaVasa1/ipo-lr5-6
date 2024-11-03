@@ -6,4 +6,4 @@ with open(filename) as file, open(outputname, 'w') as output:
     if len(i) > 5:  
       output.write(i)
 
-print("Строки, содержащие более 5 символов, записаны в файл", outputname)
+print("готово")
